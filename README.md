@@ -53,3 +53,35 @@ To run the project locally, follow these steps:
 
 ## Project Structure
 
+## API Endpoints
+
+- **POST /generate**: Receives a query and returns summarized news articles.
+  - **Request Body**:
+    ```json
+    {
+      "query": "climate change"
+    }
+    ```
+  - **Response**:
+    ```json
+    {
+      "response": [
+        {
+          "summary": "Summary text here",
+          "source": "https://example.com"
+        }
+      ],
+      "suggestedQueries": [
+        "query suggestion 1",
+        "query suggestion 2"
+      ]
+    }
+    ```
+
+## Environment Variables
+
+The backend uses environment variables for API keys and other configurations. You can create a `.env` file at the root of the project to store environment variables:
+
+```bash
+API_KEY=your_event_registry_api_key
+
